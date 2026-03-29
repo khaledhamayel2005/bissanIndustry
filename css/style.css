@@ -1,0 +1,262 @@
+/* Style Sheet Bissan Specialized Industry Company */
+
+/* heading styles */
+h1 {
+  /*1.put h1 in center */
+  text-align: center;
+  /*2.color of h1 */
+  color: whitesmoke;
+  /*3.background color of h1 */
+  background-color: #c98736;
+  /*4.margin of h1 */
+  margin: -10px;
+}
+/* header styles */
+header {
+  /*1. remove default margin and padding */
+  margin: 0;
+  padding: 0;
+  /*2. background color of header */
+  background-color: #c98736;
+  width: 100%;
+}
+/* body styles */
+body {
+  /*1. remove default margin and padding */
+  margin: 0;
+  padding: 0;
+  /*2. background color of body */
+  background-color: #f2e9e4;
+}
+/* navigation styles */
+nav ul {
+  /*1. remove default list style */
+  list-style-type: none;
+  /*2. display navigation items in a row */
+  display: flex;
+  /*3. center navigation items */
+  justify-content: center;
+  /*4. padding and margin for navigation */
+  padding: 20px;
+  margin: 0;
+  background-color: #c98736;
+}
+
+/* navigation item styles */
+nav ul li {
+  /*1. margin for navigation items */
+  margin: 10px;
+  /*2. font styles for navigation items */
+  font: bold 16px message-box;
+}
+
+/* navigation link styles */
+nav ul li a {
+  /*1. remove default text decoration */
+  text-decoration: none;
+  /*2. color and padding for navigation links */
+  color: white;
+  padding: 10px 15px;
+  /*3. transition effect for hover state */
+  transition: background-color 0.3s;
+}
+
+/* navigation link hover styles */
+nav ul li a:hover {
+  /*1. background color change on hover */
+  background-color: #a66b2a;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+}
+/* logo styles */
+.logo {
+  width: 400px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+/* main content styles */
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* section styles */
+section {
+  margin-bottom: 20px;
+}
+/* heading styles for sections */
+h2 {
+  color: #c98736;
+  border-bottom: 2px solid #c98736;
+  padding-bottom: 5px;
+}
+/* paragraph styles */
+p {
+  line-height: 1.6;
+}
+/* list styles */
+ul {
+  padding-left: 20px;
+}
+
+/* contact information styles */
+.contact-info p {
+  margin: 5px 0;
+}
+/* Make nav fixed with shadow */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0px 1px 0px rgb(219, 217, 217);
+}
+/* contact info styles */
+.contact-info {
+  background-color: #ffffff;
+  border: 1px solid #c98736;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+ /* contact info heading styles */
+.contact-info h2 {
+  color: #c98736;
+  margin-bottom: 10px;
+}
+
+/* contact form styles */
+.contact-form {
+  background-color: #ffffff;
+  border: 1px solid #c98736;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+/* contact form label styles */
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: bold;
+}
+
+/*contact form input and textarea styles */
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #c98736;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+
+/* contact form input and textarea focus styles */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #c98736;
+}
+
+/* contact form button styles */
+.contact-form button {
+  background-color: #c98736;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+/* contact form button hover styles */
+.contact-form button:hover {
+  background-color: #a66b2a;
+}
+
+
+/* contact watsapp styles */
+.contact-watsapp {
+  background-color: white;
+  border: 1px solid #c98736;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+/* contact watsapp heading styles */
+.qr-code {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+}
+
+/* footer styles */
+footer {
+    background-color: #c98736;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logo {
+        width: 250px; /* Smaller logo for mobile */
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    nav ul {
+        padding: 15px;
+        flex-wrap: wrap; /* Allow wrapping on small screens */
+    }
+
+    nav ul li {
+        margin: 5px;
+    }
+
+    nav ul li a {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 28px; /* Smaller heading */
+        margin: -5px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .contact-info, .contact-form, .contact-watsapp {
+        max-width: 100%;
+        margin: 15px 0;
+        padding: 15px;
+    }
+
+    .qr-code {
+        width: 150px;
+        height: 150px;
+    }
+
+    .welcome h2 {
+        font-size: 24px;
+    }
+}
