@@ -1,0 +1,65 @@
+.about-story {
+  display: grid;
+  gap: 22px;
+}
+
+.story-card,
+.mission-card,
+.vision-card,
+.why-card {
+  padding: 24px;
+}
+
+.story-card p,
+.mission-card p,
+.vision-card p,
+.why-card p {
+  color: var(--muted);
+}
+
+.why-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.why-list li {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px 18px;
+  box-shadow: var(--shadow-soft);
+  font-weight: 600;
+}
+
+.dual-grid {
+  display: grid;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.highlight-box {
+  padding: 24px;
+  background: linear-gradient(135deg, rgba(201,135,54,0.12), rgba(255,255,255,0.9));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.highlight-box h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.highlight-box p {
+  color: var(--muted);
+}
+
+@media (min-width: 900px) {
+  .about-story {
+    grid-template-columns: 1.15fr 0.85fr;
+  }
+
+  .dual-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

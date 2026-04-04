@@ -1,0 +1,200 @@
+.hero {
+  padding: 34px 0 72px;
+  background:
+    radial-gradient(circle at top right, rgba(201, 135, 54, 0.18), transparent 28%),
+    linear-gradient(180deg, #fff, #f8f6f2 60%);
+}
+
+.hero-wrap {
+  display: grid;
+  gap: 26px;
+  align-items: center;
+}
+
+.hero-content .badge {
+  display: inline-flex;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(201, 135, 54, 0.12);
+  color: var(--primary-dark);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.hero-content h2 {
+  font-size: 2.2rem;
+  line-height: 1.3;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+
+.hero-content p {
+  color: var(--muted);
+  margin-bottom: 22px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hero-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  min-height: 320px;
+  background:
+    linear-gradient(rgba(17, 24, 39, 0.28), rgba(17, 24, 39, 0.28)),
+    url('../images/industry.jpeg') center/cover no-repeat;
+  box-shadow: var(--shadow);
+}
+
+.hero-card::after {
+  content: '';
+  position: absolute;
+  inset: auto 18px 18px 18px;
+  height: 100px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.18);
+  backdrop-filter: blur(10px);
+}
+
+.hero-stats {
+  position: absolute;
+  right: 28px;
+  left: 28px;
+  bottom: 30px;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  color: #fff;
+  text-align: center;
+}
+
+.hero-stats strong {
+  display: block;
+  font-size: 1.05rem;
+}
+
+.hero-stats span {
+  font-size: 0.76rem;
+  color: rgba(255,255,255,0.82);
+}
+
+.features-grid,
+.values-grid,
+.products-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.feature-item,
+.value-item,
+.product-item {
+  padding: 22px;
+}
+
+.feature-item h3,
+.value-item h3,
+.product-item h3 {
+  margin-bottom: 10px;
+  color: var(--accent);
+}
+
+.feature-item p,
+.value-item p,
+.product-item p {
+  color: var(--muted);
+}
+
+.about-preview {
+  display: grid;
+  gap: 22px;
+  align-items: center;
+}
+
+.about-preview-image {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  min-height: 280px;
+  background: url('../images/MangeIndustry.jpeg') center/cover no-repeat;
+  box-shadow: var(--shadow);
+}
+
+.about-preview-content {
+  padding: 26px;
+}
+
+.about-preview-content p {
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.cta-box {
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--accent), #2b3545);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+
+.cta-box h2 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+.cta-box p {
+  color: rgba(255,255,255,0.82);
+  margin-bottom: 18px;
+}
+
+.cta-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cta-actions .btn-outline {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255,255,255,0.2);
+}
+
+.cta-actions .btn-outline:hover {
+  border-color: rgba(255,255,255,0.5);
+  color: #fff;
+}
+
+@media (min-width: 700px) {
+  .hero-actions,
+  .cta-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .features-grid,
+  .values-grid,
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-wrap,
+  .about-preview {
+    grid-template-columns: 1.05fr 0.95fr;
+  }
+
+  .hero-content h2 {
+    font-size: 3.5rem;
+  }
+
+  .features-grid,
+  .values-grid,
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
