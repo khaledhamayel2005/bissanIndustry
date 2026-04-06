@@ -1,0 +1,27 @@
+# Robots.txt for Bissan Specialized Industry Company
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /about.html
+Allow: /contact.html
+Allow: /css/
+Allow: /images/
+Disallow: /admin/
+Disallow: /.git/
+Disallow: /bissanIndustry/
+
+# Sitemap location
+Sitemap: https://bissan-industry.com/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1
+
+# Google specific
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing specific
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
