@@ -1,4 +1,4 @@
-# Robots.txt for Bissan Specialized Industry Company
+# Robots.txt for شركة بيسان المتخصصة للصناعة
 User-agent: *
 Allow: /
 Allow: /index.html
