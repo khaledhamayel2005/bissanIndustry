@@ -169,25 +169,25 @@ ul {
 }
 
 .navbar {
-  min-height: 150px;
+  min-height: 128px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 22px;
-  padding: 16px 0;
+  gap: 18px;
+  padding: 14px 0;
   position: relative;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 16px;
   min-width: 0;
 }
 
 .brand img {
-  width: 140px;
-  height: 140px;
+  width: 120px;
+  height: 120px;
   object-fit: contain;
   flex-shrink: 0;
   filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.28));
@@ -515,7 +515,7 @@ ul {
 
   .page-hero h2,
   .section-head h2 {
-    font-size: 0.6rem;
+    font-size: 1.22rem;
   }
 
   .nav-links a {
@@ -595,16 +595,16 @@ ul {
   }
 
   .navbar {
-    min-height: 150px;
+    min-height: 128px;
   }
 
   .brand img {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
   }
 
   .main-nav {
-    height: 150px;
+    height: 128px;
     display: flex;
     align-items: center;
   }
@@ -613,12 +613,12 @@ ul {
     height: 100%;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: 10px;
   }
 
   .nav-links a {
-    min-height: 48px;
-    padding: 12px 18px;
+    min-height: 42px;
+    padding: 10px 16px;
   }
 
   .main-nav {
