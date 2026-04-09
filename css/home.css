@@ -50,6 +50,11 @@
   box-shadow: var(--shadow);
 }
 
+.hero-card:hover {
+  transform: translateY(-4px);
+  transition: var(--transition);
+}
+
 .hero-card::after {
   content: '';
   position: absolute;
@@ -97,6 +102,14 @@
   padding: 22px;
 }
 
+.feature-item,
+.value-item,
+.product-item,
+.about-preview-content,
+.cta-box {
+  border: 1px solid rgba(201, 135, 54, 0.14);
+}
+
 .feature-item h3,
 .value-item h3,
 .product-item h3 {
@@ -122,6 +135,11 @@
   min-height: 280px;
   background: url('../images/MangeIndustry.jpeg') center/cover no-repeat;
   box-shadow: var(--shadow);
+}
+
+.about-preview-image:hover {
+  transform: scale(1.01);
+  transition: var(--transition);
 }
 
 .about-preview-content {
@@ -196,5 +214,100 @@
   .values-grid,
   .products-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 22px 0 48px;
+  }
+
+  .hero-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 0.96rem;
+  }
+
+  .hero-card {
+    min-height: 230px;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr;
+    right: 12px;
+    left: 12px;
+    bottom: 12px;
+    gap: 8px;
+  }
+
+  .hero-stats div {
+    padding: 7px 0;
+    background: rgba(255,255,255,0.06);
+    border-radius: 14px;
+  }
+
+  .about-preview-image {
+    min-height: 210px;
+  }
+
+  .feature-item,
+  .value-item,
+  .product-item,
+  .about-preview-content,
+  .cta-box {
+    padding: 18px;
+  }
+
+  .features-grid,
+  .values-grid,
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-content h2 {
+    font-size: 1.45rem;
+  }
+
+  .hero-stats strong {
+    font-size: 0.95rem;
+  }
+
+  .hero-stats span {
+    font-size: 0.72rem;
+  }
+
+  .cta-box h2 {
+    font-size: 1.35rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-content .badge {
+    font-size: 0.8rem;
+    padding: 7px 12px;
+  }
+
+  .hero-content h2 {
+    font-size: 1.32rem;
+  }
+
+  .hero-content p,
+  .about-preview-content p,
+  .cta-box p {
+    font-size: 0.92rem;
+  }
+
+  .hero-actions,
+  .cta-actions {
+    gap: 10px;
+  }
+
+  .btn,
+  .btn-outline {
+    width: 100%;
   }
 }

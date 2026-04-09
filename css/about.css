@@ -32,6 +32,11 @@
   font-weight: 600;
 }
 
+.why-list li:hover {
+  border-color: rgba(201, 135, 54, 0.28);
+  background: linear-gradient(135deg, rgba(201,135,54,0.08), #fff);
+}
+
 .dual-grid {
   display: grid;
   gap: 18px;
@@ -61,5 +66,51 @@
 
   .dual-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .story-card,
+  .mission-card,
+  .vision-card,
+  .why-card,
+  .highlight-box {
+    padding: 18px;
+  }
+
+  .why-list {
+    gap: 12px;
+  }
+
+  .why-list li {
+    padding: 14px 15px;
+    font-size: 0.96rem;
+  }
+
+  .about-story,
+  .dual-grid {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 380px) {
+  .why-list li {
+    padding: 12px 13px;
+    font-size: 0.92rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .story-card,
+  .mission-card,
+  .vision-card,
+  .why-card,
+  .highlight-box {
+    padding: 16px;
+  }
+
+  .about-story,
+  .dual-grid {
+    gap: 14px;
   }
 }
