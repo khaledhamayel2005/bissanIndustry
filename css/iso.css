@@ -13,11 +13,22 @@
 
 .certs-grid {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
+  align-items: stretch;
 }
 
 .cert-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.08);
 }
 
 .cert-card:hover .cert-image-wrap img {
@@ -25,8 +36,11 @@
 }
 
 .cert-image-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: var(--surface-2);
-  padding: 12px;
+  padding: 14px;
   border-bottom: 1px solid var(--border);
   overflow: hidden;
 }
@@ -41,19 +55,42 @@
 }
 
 .cert-body {
-  padding: 16px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex: 1;
 }
 
 .cert-body h3 {
-  font-size: 1.08rem;
+  font-size: clamp(1rem, 1.2vw, 1.08rem);
+  line-height: 1.6;
   color: var(--accent);
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .cert-body p {
   color: var(--muted);
   font-size: 0.95rem;
-  margin-bottom: 12px;
+  line-height: 1.8;
+}
+
+.cert-issuer {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--primary-dark) !important;
+}
+
+.cert-caption {
+  margin-bottom: 14px;
+}
+
+.cert-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
 }
 
 .cert-meta {
@@ -66,17 +103,12 @@
   color: var(--primary-dark);
   font-weight: 700;
   font-size: 0.86rem;
+  border: 1px solid rgba(201, 135, 54, 0.22);
 }
 
-@media (min-width: 680px) {
+@media (max-width: 860px) {
   .certs-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (min-width: 1060px) {
-  .certs-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -90,6 +122,7 @@
   }
 
   .certs-grid {
+    grid-template-columns: 1fr;
     gap: 16px;
   }
 
@@ -101,8 +134,27 @@
     font-size: 0.92rem;
   }
 
+  .cert-body h3 {
+    font-size: 1rem;
+  }
+
+  .cert-issuer {
+    font-size: 0.86rem;
+  }
+
   .cert-image-wrap {
     padding: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cert-card,
+  .cert-image-wrap img {
+    transition: none;
+  }
+
+  .cert-card:hover {
+    transform: none;
   }
 }
 
